@@ -1,0 +1,1 @@
+﻿Get-CMDevice | Select-Object name, clientversion, IsClient, DeviceOS, DeviceOSBuild, lastactivetime, ADLastLogonTime | Sort-Object name | Export-Csv -Delimiter ";" C:\temp\ListSCCM.csv -NoTypeInformation

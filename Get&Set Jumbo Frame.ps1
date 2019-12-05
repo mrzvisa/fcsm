@@ -1,0 +1,1 @@
+﻿Get-NetAdapterAdvancedProperty -name "vEthernet (LM)","vEthernet (CSV)","vEthernet (HQ_Backbone_vSwitch)"  -DisplayName "Jumbo Packet" | Set-NetAdapterAdvancedProperty -name "vEthernet (LM)","vEthernet (CSV)","vEthernet (HQ_Backbone_vSwitch)"  -DisplayName "Jumbo Packet" -DisplayValue "9014 Bytes"
