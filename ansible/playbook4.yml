@@ -1,0 +1,29 @@
+---
+- name: My Playbook variables lesson
+  hosts: all
+  become: root
+  vars:
+    message1: Privet
+    message2: World
+    secret:   LalalalaSecret
+
+  tasks:
+  - name: Print Secret Variable
+    debug:
+      var: secret
+  - debug:
+      msg: "secretnoe slobo: {{ secret }}"
+  - debug:
+      msg: "vladelec etogo servera -->{{ ansible_host }}<--"
+
+  - set_fact: full_message="{{ message1 }} {{ message2 }} from {{ ansible_host }}"
+   
+  -  debug:
+      var: full_message
+  - debug:
+      var: ansible_distribution
+  - shell: uptime
+    register: results
+
+  - debug:
+      var: results.stdout

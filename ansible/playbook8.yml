@@ -1,0 +1,50 @@
+---
+- name: My super Playbook
+  hosts: all
+  become: yes
+
+  vars:
+    mytext: "Privet FCSM"
+
+  tasks:
+  - name: Ping Test
+    ping:
+
+  - name: Unregister Server from LB
+    shell: echo this server {{ inventory_hostname }} was deregistered our LB, node name is {{ ansible_nodename }} >> /home/log.txt
+    delegate_to: 127.0.0.1
+
+  - name: Update my database
+    shell: echo updating Database...
+    run_once: true
+
+  - name: Create File1
+    copy:
+     dest: /home/file1.txt
+     content: |
+      This is File 1
+      On English Hello World
+      On Russion {{ mytext }}
+    delegate_to: bas-client1
+ 
+  - name: Create File2
+    copy:
+     dest: /home/file2.txt
+     content: |
+      This is File 2
+      On English Hello World
+      On Russion {{ mytext }}
+    delegate_to: bas-client2
+
+  - name: Rebooy my servers
+    shell: sleep 3 && reboot now
+    async: 1
+    poll: 0
+
+  - name: Wait till my server come up online
+    wait_for:
+     host: "{{ inventory_hostname }}"
+     state: started
+     delay: 5
+     timeout: 40
+    delegate_to: 127.0.0.1
