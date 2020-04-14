@@ -1,0 +1,30 @@
+---
+- name: Loop Playbook
+  hosts: bas-client1
+  become: yes
+
+  tasks:
+  - name: Say hello all
+    debug: msg="Hello {{ item }}"
+    loop:
+       - "Vasya"
+       - "Petya"
+       - "Masha"
+       - "Anna"
+  - name: Loop until example
+    shell: echo -n Z >> myfile.txt && cat myfile.txt
+    register: output
+    delay: 2
+    retries: 10
+    until: output.stdout.find("ZZZZ") == false
+
+  - name: Print Output final
+    debug:
+     var: output.stdout
+  
+#  - name: Install mane Package
+#    yum: name={{ item }} state=installed
+#    with_items:
+#       - python
+#       - tree
+       

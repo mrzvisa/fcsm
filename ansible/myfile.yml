@@ -1,0 +1,30 @@
+---
+ - fruits:
+	- apple
+	- mango
+	- orange
+ - vegetables:
+	- potatoes
+	- cucumber
+	- tomatos
+ - vasya:
+	- telephon: 911
+	- last name: petrov
+	- rang: 1
+	- position: developer
+	- skills:
+		- python
+		- ruby
+		- go
+		- php
+ - petya:
+	- telephon: 922
+	- last name: maanger
+	- position: ivanov
+	- skills:
+		- manage
+		- soft skill
+		- drive license
+ - kolya: { telephone: 933, position: boss, skills: ['killer','cleaner'] }
+  fruits: ['apple', 'orange', 'mango']
+...

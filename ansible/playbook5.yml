@@ -1,0 +1,14 @@
+---
+ - name: Install Git
+   hosts: all
+   become: yes
+
+   tasks:
+   - name: Install Git
+     apt: name="git" state=latest
+     when: ansible_os_family=="Debian"
+     delegate_to: 127.0.0.1  
+   - name: Install Git for CentOS
+     yum: name=git state=latest
+     when: ansible_os_family=="RedHat"
+     delegate_to: 127.0.0.1

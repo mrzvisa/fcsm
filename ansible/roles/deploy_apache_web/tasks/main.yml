@@ -1,0 +1,40 @@
+---
+  - block: # ======  Block for Redhat =====
+
+     - name: Install Apache Web Server for Redhat
+       yum: name=httpd state=latest
+
+     - name: Start Web Server and Enable it on the boot Redhat
+       service: name=httpd state=started enabled=yes
+
+    when: ansible_os_family == "RedHat"
+
+  - block: # ====== Block for Debian ======
+
+     - name: Install Apache Web Server for Ubuntu
+       apt: name=apache2 state=latest update_cache=yes
+
+     - name: Start Web Server and Enable it on the boot Debian
+       service: name=apache2 state=started enabled=yes
+
+    when: ansible_os_family == "Debian"
+
+  - name: Generate INDEX.HTML file
+    template: src=index.j2 dest={{ destin_folder }}/index.html mode=0555
+    notify:
+      - Restart Apache Redhat
+      - Restart Apache Debian
+
+  - name: Copy me webpage to servers
+    copy: src={{ item }} dest={{ destin_folder }} mode=0555
+   # copy: src={{ item }} dest={{ destin_folder }} mode=0555
+   # with_fileglob: "{{ source_folder }}/*.*"
+    loop:
+      - index2.html
+
+    notify:
+      - Restart Apache Redhat
+      - Restart Apache Debian
+
+
+# tasks file for deploy_apache_web
