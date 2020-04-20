@@ -1,7 +1,0 @@
-file2 - delete
-changed
-#comment
-get-commit
-git commit
-psremote session
-#pum purum

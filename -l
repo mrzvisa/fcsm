@@ -1,0 +1,76 @@
+[33mcommit 7feaa665e544c6562a07d4bb92fd011ce5da0b6f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 702c216 3121015
+Author: mrzvisa <57905870+mrzvisa@users.noreply.github.com>
+Date:   Wed Apr 15 13:19:09 2020 +0300
+
+    Merge pull request #1 from mrzvisa/mybranch_task
+    
+    few changes
+
+[33mcommit 3121015cba55747863bd256083c68b4fee9b6e6d[m
+Author: Alexey Biryukov <mrz1488@gmail.com>
+Date:   Wed Apr 15 10:10:25 2020 +0000
+
+    few changes
+
+[33mcommit 702c216c6cb9c9ef9f74f9414d91d7568784072f[m
+Author: Alexey Biryukov <mrz1488@gmail.com>
+Date:   Wed Apr 15 08:46:35 2020 +0000
+
+    change
+
+[33mcommit 90771720f96249ab518a5d47f2e45c7480947a44[m
+Merge: ae723ad a2dc902
+Author: Alexey Biryukov <mrz1488@gmail.com>
+Date:   Wed Apr 15 08:38:56 2020 +0000
+
+    Merge branch 'master' of github.com:mrzvisa/fcsm
+
+[33mcommit a2dc902ffd51da7aed5309398f36cceff388c2e8[m
+Author: Alexey Biryukov <mrz1488@gmail.com>
+Date:   Wed Apr 15 02:23:54 2020 +0300
+
+    del
+
+[33mcommit face5d9fca3dc06ff051b2f8b6fc220715e8ba8a[m
+Merge: 2aa3222 cc21600
+Author: Alexey Biryukov <mrz1488@gmail.com>
+Date:   Wed Apr 15 02:21:12 2020 +0300
+
+    Merge branch 'master' of https://github.com/mrzvisa/fcsm
+
+[33mcommit cc2160012c929e7ff6df8744c317878254dcb08f[m
+Author: mrzvisa <57905870+mrzvisa@users.noreply.github.com>
+Date:   Wed Apr 15 02:20:55 2020 +0300
+
+    Delete {changed:
+
+[33mcommit 2aa3222a9c6141991891cd58985b1861e309c900[m
+Author: Alexey Biryukov <mrz1488@gmail.com>
+Date:   Wed Apr 15 02:18:41 2020 +0300
+
+    windows test
+
+[33mcommit ae723ad6a7235da6d9775dc3bd1e7a419bb76a81[m
+Author: Alexey Biryukov <mrz1488@gmail.com>
+Date:   Tue Apr 14 22:59:56 2020 +0000
+
+    test file for ssh
+
+[33mcommit 77e8fbc23bf99d46e42119b3a6ca2793dbd95f10[m
+Author: Alexey Biryukov <mrz1488@gmail.com>
+Date:   Mon Apr 13 20:20:48 2020 +0000
+
+    ansible lessons directory added
+
+[33mcommit 037eb63f7c67e7120f3e3100a54b290b89c38ffa[m
+Author: Alexey Biryukov <57905870+mrzvisa@users.noreply.github.com>
+Date:   Thu Dec 5 14:53:33 2019 +0300
+
+    removed
+
+[33mcommit d5065b87ec67f645cc7d8f902561d72a1090413d[m
+Author: Alexey Biryukov <57905870+mrzvisa@users.noreply.github.com>
+Date:   Thu Dec 5 14:40:49 2019 +0300
+
+    Add all files
